@@ -16,7 +16,7 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div className="border">
+                <div>
                     <LeftSideNav></LeftSideNav>
                 </div>
 
@@ -24,7 +24,7 @@ const Home = () => {
                     Middle
                 </div>
 
-                <div className="border">
+                <div className="">
                     <RightSideNav></RightSideNav>
                 </div>
 
