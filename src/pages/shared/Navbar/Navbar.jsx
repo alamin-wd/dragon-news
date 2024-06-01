@@ -31,16 +31,19 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
+
+            {/* Navbar End */}
             <div className="navbar-end">
               
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                <div tabIndex={0} role="button" 
+                className="btn btn-ghost btn-circle avatar mr-2">
                     <div className="w-10 rounded-full">
                         <img src={userDefaultPhoto} />
                     </div>
                 </div>
                 <div>
                     <NavLink>
-                        <button className="bg-[#403F3F] text-white text-lg font-medium px-4 py-1">Login</button>
+                        <button className="bg-[#403F3F] hover:bg-[#292828] text-white text-lg font-medium px-4 py-1 rounded-lg">Login</button>
                     </NavLink>
                 </div>
             </div>

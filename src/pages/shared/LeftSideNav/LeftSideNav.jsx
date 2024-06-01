@@ -44,9 +44,9 @@ const LeftSideNav = () => {
                 {
                     news.map(news => <div
                         className="py-4"
-                        key={news.id}>
+                        key={news._id}>
 
-                        <img src={news.image_url} alt="" />
+                        <img src={news.thumbnail_url} alt="" />
 
                         <h3 className="text-[#403F3F] text-lg font-semibold my-3">
                             {news.title}
@@ -56,7 +56,7 @@ const LeftSideNav = () => {
                             <h4 className="text-[#403F3F] font-medium">Sports</h4>
                             <span className="flex items-center gap-2">
                                 <CiCalendar />
-                                {news.author.published_date}
+                                <small>{news.author.published_date}</small>
                             </span>
                         </div>
                     </div>)

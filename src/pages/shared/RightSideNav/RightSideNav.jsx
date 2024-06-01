@@ -37,19 +37,19 @@ const RightSideNav = () => {
                 <h2 className="text-2xl font-semibold my-4">Find Us On</h2>
 
                 <div className="border rounded-t-lg rounded-b-lg" >
-                    <a className="flex items-center gap-2 p-3 border-b"
+                    <a className="flex items-center gap-2 p-3 border-b hover:underline"
                         href="">
                         <span className="w-8 bg-[#F3F3F3] text-[#3B599C] rounded-full p-2"><FaFacebookF /></span>
                         <span className="text-[#706F6F] font-medium">Facebook</span>
                     </a>
 
-                    <a className="flex items-center gap-2 p-3 border-b"
+                    <a className="flex items-center gap-2 p-3 border-b hover:underline"
                         href="">
                         <span className="w-8 bg-[#F3F3F3] text-[#58A7DE] rounded-full p-2"><FaTwitter /></span>
                         <span className="text-[#706F6F] font-medium">Twitter</span>
                     </a>
 
-                    <a className="flex items-center gap-2 p-3"
+                    <a className="flex items-center gap-2 p-3 hover:underline"
                         href="">
                         <span className="w-8 bg-[#F3F3F3] text-[#D82D7E] rounded-full p-2"><FaInstagram /></span>
                         <span className="text-[#706F6F] font-medium">Instagram</span>
