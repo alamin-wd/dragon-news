@@ -4,7 +4,6 @@ import LeftSideNav from "../shared/LeftSideNav/LeftSideNav";
 import Navbar from "../shared/Navbar/Navbar";
 import RightSideNav from "../shared/RightSideNav/RightSideNav";
 import BreakingNews from "./BreakingNews";
-import News from "./News/NewsCard";
 import NewsCard from "./News/NewsCard";
 
 const Home = () => {

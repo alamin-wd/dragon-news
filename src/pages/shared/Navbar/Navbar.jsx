@@ -1,12 +1,28 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink,  } from "react-router-dom";
 import userDefaultPhoto from "../../../assets/user.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
 
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+        .then()
+        .catch()
+    }
+
     const navLinks = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/career">Career</NavLink></li>
+        <li className="text-lg font-medium mr-2">
+            <NavLink to="/">Home</NavLink>
+        </li>
+        <li className="text-lg font-medium mr-2">
+            <NavLink to="/about">About</NavLink>
+        </li>
+        <li className="text-lg font-medium mr-2">
+            <NavLink to="/career">Career</NavLink>
+        </li>
     </>
 
     return (
@@ -34,17 +50,23 @@ const Navbar = () => {
 
             {/* Navbar End */}
             <div className="navbar-end">
-              
-                <div tabIndex={0} role="button" 
-                className="btn btn-ghost btn-circle avatar mr-2">
+
+                <div tabIndex={0} role="button"
+                    className="btn btn-ghost btn-circle avatar mr-2">
                     <div className="w-10 rounded-full">
                         <img src={userDefaultPhoto} />
                     </div>
                 </div>
                 <div>
-                    <NavLink>
-                        <button className="bg-[#403F3F] hover:bg-[#292828] text-white text-lg font-medium px-4 py-1 rounded-lg">Login</button>
-                    </NavLink>
+                    {
+                        user ?
+                                <button onClick={handleLogOut}
+                                    className="bg-[#403F3F] hover:bg-[#292828] text-white text-lg font-medium px-4 py-1 rounded-lg">Log Out</button>
+                            :
+                            <Link to={"/login"}>
+                                <button className="bg-[#403F3F] hover:bg-[#292828] text-white text-lg font-medium px-4 py-1 rounded-lg">Login</button>
+                            </Link>
+                    }
                 </div>
             </div>
         </div>
